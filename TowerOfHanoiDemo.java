@@ -13,7 +13,7 @@ public class TowerOfHanoiDemo{
         System.out.println("Number of operations : "+count);
     }
 
-    public static void toh(int discs, int source, int dest, int aux){
+    public static void toh(int discs, int source , int dest, int aux){
         if(discs == 1){
             System.out.println("Moving disc "+discs+" from rod "+source+" to rod "+dest);
             count++;
@@ -23,7 +23,6 @@ public class TowerOfHanoiDemo{
         toh(discs - 1, source, aux, dest);
         System.out.println("Moving disc "+discs+" from rod "+source+" to rod "+dest);
         count++;
-        toh(discs - 1, source, dest, aux);
-        return;
+        toh(discs - 1, aux, dest, source);
     }
 }
