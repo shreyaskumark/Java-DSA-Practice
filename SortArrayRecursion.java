@@ -20,7 +20,7 @@ public class SortArrayRecursion {
             return;
 
         int value = vector.get(vector.size()-1);
-        vector.removeLast();                    // 1 0 3 2  // 1 0 3  // 1 0  // 1  // null
+        vector.remove(vector.size());                   // 1 0 3 2  // 1 0 3  // 1 0  // 1  // null
         sort(vector);
         insert(vector, value);
         
@@ -34,7 +34,7 @@ public class SortArrayRecursion {
             }
         
         int value = vector.get(vector.size()-1);
-        vector.removeLast();
+        vector.remove(vector.size());
         insert(vector, temp);
         vector.add(value);
     }
